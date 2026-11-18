@@ -1,0 +1,17 @@
+# Página de error 404 («página no encontrada»).
+# Plantilla: site/templates/error.php
+title: Página no encontrada (404)
+icon: alert
+
+options:
+  delete: false
+  changeSlug: false
+  changeStatus: false
+  changeTemplate: false
+  duplicate: false
+
+fields:
+  lead:
+    label: Texto
+    type: textarea
+    buttons: false

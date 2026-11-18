@@ -1,0 +1,9 @@
+Slug: error
+
+----
+
+Title: Página no encontrada
+
+----
+
+Lead: Lo sentimos, la página que buscas no existe o se ha movido.

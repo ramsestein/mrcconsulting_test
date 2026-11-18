@@ -1,0 +1,63 @@
+Slug: contacto
+
+----
+
+Title: Contacto
+
+----
+
+Lead: Cuéntanos tu proyecto y veamos cómo podemos ayudarte.
+
+----
+
+Intro: <p>Tanto si estás planificando tu primer estudio como si coordinas un gran proyecto multicéntrico, nos encantará conocer tu investigación.</p><p>Rellena el formulario y te responderemos en breve. También puedes escribirnos directamente por correo electrónico.</p>
+
+----
+
+Success: 
+
+----
+
+Topics:
+
+- 
+  label: Poner en marcha un estudio
+  key: start
+- 
+  label: Monitorización
+  key: monitoring
+- 
+  label: Bioestadística
+  key: statistics
+- 
+  label: Base de datos / eCRD
+  key: database
+- 
+  label: Apoyo regulatorio
+  key: regulatory
+- 
+  label: Productos sanitarios
+  key: medical-devices
+- 
+  label: >
+    Servicios científicos (redacción,
+    traducción, diseño)
+  key: scientific
+- 
+  label: Soluciones digitales
+  key: digital
+- 
+  label: Otro
+  key: other
+
+----
+
+Orgtypes: Hospital, Universidad, Empresa, Fundación académica, Instituto de investigación, Otro
+
+----
+
+Studytypes: Estudio observacional, Ensayo clínico promovido por el investigador, Investigación con producto sanitario, Registro, Otro
+
+----
+
+Stages: Idea / concepto, Diseño del estudio, Financiación / viabilidad, Trámites regulatorios, Estudio en marcha, Análisis / publicación

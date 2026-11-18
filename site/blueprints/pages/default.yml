@@ -1,0 +1,46 @@
+# =====================================================================
+#  Tipo de página «Página estándar» (la mayoría de páginas de la web).
+#  Se monta con bloques. Plantilla: site/templates/default.php
+# =====================================================================
+title: Página estándar
+icon: page
+
+status:
+  draft:
+    label: Borrador
+    text: No se ve en la web. Solo en el panel.
+  unlisted:
+    label: Publicada (oculta)
+    text: Se ve con su enlace, pero no aparece en la lista de páginas.
+  listed:
+    label: Publicada
+    text: Visible en la web.
+
+options:
+  changeTemplate:
+    - default
+
+tabs:
+  content:
+    label: Contenido
+    icon: text
+    columns:
+      main:
+        width: 3/4
+        fields:
+          lead:
+            label: Subtítulo de la página
+            type: textarea
+            buttons: false
+            help: Aparece debajo del título, en la cabecera de la página. Si el primer bloque es una «Portada», la cabecera no se muestra.
+          blocks: fields/blocks
+      sidebar:
+        width: 1/4
+        sections:
+          images:
+            label: Imágenes de esta página
+            type: files
+            layout: cards
+            template: image
+            info: "{{ file.dimensions }}"
+  seo: tabs/seo

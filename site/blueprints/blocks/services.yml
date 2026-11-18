@@ -1,0 +1,68 @@
+# Bloque «Grupo de servicios»: título del grupo + lista de servicios
+# desplegables (se abren al pulsar). También sirve para preguntas del tipo
+# «¿Necesitas…?» con un botón al formulario.
+# HTML: site/snippets/blocks/services.php · Estilos: .b-services
+name: Grupo de servicios
+icon: list-bullet
+preview: fields
+wysiwyg: true
+fields:
+  eyebrow: fields/eyebrow
+  anchor: fields/anchor
+  title:
+    label: Título del grupo
+    type: text
+    required: true
+  subtitle:
+    label: Subtítulo
+    type: text
+  intro:
+    extends: fields/writer
+    label: Texto de introducción
+  layout:
+    label: Presentación
+    type: toggles
+    default: accordion
+    width: 1/2
+    options:
+      accordion: Desplegables
+      open: Todo visible (tarjetas)
+  items:
+    label: Servicios
+    type: structure
+    columns:
+      title: true
+      lead: true
+    fields:
+      title:
+        label: Nombre del servicio
+        type: text
+        required: true
+      lead:
+        label: Frase de presentación
+        type: textarea
+        buttons: false
+      listTitle:
+        label: Título de la lista
+        type: text
+        help: P. ej. «Nuestros servicios incluyen:»
+      list:
+        label: Lista de puntos
+        type: list
+      closing:
+        label: Frase final
+        type: textarea
+        buttons: false
+      button:
+        label: Texto del botón (opcional)
+        type: text
+        width: 1/2
+      link:
+        label: Enlace del botón
+        type: link
+        width: 1/2
+        options:
+          - page
+          - url
+          - email
+      topic: fields/topic

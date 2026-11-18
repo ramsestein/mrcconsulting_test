@@ -1,0 +1,13 @@
+Title: Blog
+
+----
+
+Lead: News, courses and agreements from MR&C Consulting.
+
+----
+
+Perpage: 9
+
+----
+
+Uuid: dr3jxwop0lhbvmcu

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="40 440 560 1030" width="280" height="515">
+  <!-- Motivo decorativo grande (el «clip» del logo) para fondos -->
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#4ea272"/>
+      <stop offset="1" stop-color="#106ab1"/>
+    </linearGradient>
+  </defs>
+  <path d="M80 955V565a80 80 0 0 1 160 0v717a79 79 0 0 0 158 0V893a80 80 0 0 1 160 0v547"
+        fill="none" stroke="url(#g)" stroke-width="22"/>
+</svg>

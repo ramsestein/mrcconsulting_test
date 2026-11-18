@@ -1,0 +1,42 @@
+# Bloque «Equipo»: fichas de las personas del equipo.
+# HTML: site/snippets/blocks/team.php · Estilos: .b-team
+name: Equipo
+icon: users
+preview: fields
+wysiwyg: true
+fields:
+  eyebrow: fields/eyebrow
+  anchor: fields/anchor
+  title:
+    label: Título
+    type: text
+  intro:
+    extends: fields/writer
+    label: Texto de introducción
+  members:
+    label: Personas
+    type: structure
+    columns:
+      name: true
+      role: true
+    fields:
+      photo:
+        label: Foto (opcional)
+        type: files
+        max: 1
+        layout: cards
+        query: page.images
+        uploads: image
+        help: Cuadrada, mínimo 400 × 400 px. Si no hay foto se muestran las iniciales.
+      name:
+        label: Nombre
+        type: text
+        required: true
+        width: 1/2
+      role:
+        label: Cargo
+        type: text
+        width: 1/2
+      bio:
+        extends: fields/writer
+        label: Biografía

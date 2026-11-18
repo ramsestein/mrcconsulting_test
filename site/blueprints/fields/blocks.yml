@@ -1,0 +1,36 @@
+# =====================================================================
+#  Campo reutilizable: el contenido de una página, montado con bloques.
+#
+#  Cada tipo de bloque son SIEMPRE dos archivos con el mismo nombre:
+#    - site/blueprints/blocks/NOMBRE.yml   → campos que ve el editor
+#    - site/snippets/blocks/NOMBRE.php     → HTML que se muestra
+#  Para crear un bloque nuevo, ver docs/recetas.md
+# =====================================================================
+label: Contenido de la página
+type: blocks
+empty: Añade secciones con el botón «+ Añadir»
+fieldsets:
+  sections:
+    label: Secciones
+    type: group
+    fieldsets:
+      - hero
+      - intro
+      - split
+      - cards
+      - services
+      - steps
+      - team
+      - pricing
+      - faq
+      - cta
+  text:
+    label: Texto sencillo
+    type: group
+    open: false
+    fieldsets:
+      - heading
+      - text
+      - list
+      - image
+      - quote

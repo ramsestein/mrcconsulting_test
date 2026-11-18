@@ -1,0 +1,27 @@
+# Bloque «Portada»: banner grande con imagen de fondo, título y botones.
+# HTML: site/snippets/blocks/hero.php · Estilos: assets/css/05-blocks.css (.b-hero)
+name: Portada (banner)
+icon: image
+preview: fields
+wysiwyg: true
+fields:
+  eyebrow: fields/eyebrow
+  title:
+    label: Título
+    type: textarea
+    buttons: false
+    required: true
+  subtitle:
+    label: Subtítulo
+    type: textarea
+    buttons: false
+  image:
+    label: Imagen de fondo
+    type: files
+    max: 1
+    layout: cards
+    query: page.images
+    uploads: image
+    width: 1/2
+    help: Foto horizontal grande (mínimo 2000 px de ancho).
+  buttons: fields/buttons

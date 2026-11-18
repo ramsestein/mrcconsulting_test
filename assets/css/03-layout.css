@@ -1,0 +1,374 @@
+/* =====================================================================
+   03 · LAYOUT — cabecera, menú, pie, cabecera de página y secciones
+   ===================================================================== */
+
+/* --- Aviso de vista previa (solo en GitHub Pages) -------------------- */
+.preview-banner {
+  padding: 0.4rem var(--gutter);
+  background: #fff4d6;
+  color: #6b4e00;
+  font-size: var(--fs-small);
+  font-weight: 600;
+  text-align: center;
+}
+
+/* --- Cabecera -------------------------------------------------------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgb(255 255 255 / 94%);
+  backdrop-filter: saturate(1.4) blur(10px);
+  border-bottom: 1px solid var(--c-line);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  min-height: var(--header-height);
+}
+
+.site-logo {
+  display: block;
+  flex-shrink: 0;
+}
+
+.site-logo img {
+  width: auto;
+  height: 52px;
+}
+
+/* Botón ☰ (solo móvil y tablet) */
+.nav-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  border: 1px solid var(--c-line);
+  border-radius: var(--radius-sm);
+  background: #fff;
+  color: var(--c-ink);
+  cursor: pointer;
+}
+
+.nav-toggle .icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Icono ☰ cuando está cerrado, ✕ cuando está abierto */
+.nav-toggle .icon--close,
+.nav-toggle[aria-expanded="true"] .icon--menu {
+  display: none;
+}
+
+.nav-toggle[aria-expanded="true"] .icon--close {
+  display: block;
+}
+
+/* Menú: en móvil es un panel desplegable */
+.site-nav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: 1rem var(--gutter) 1.5rem;
+  background: #fff;
+  border-bottom: 1px solid var(--c-line);
+  box-shadow: var(--shadow);
+  max-height: calc(100vh - var(--header-height));
+  overflow-y: auto;
+}
+
+.site-nav.is-open,
+.no-js .site-nav {
+  display: block;
+}
+
+.no-js .nav-toggle {
+  display: none;
+}
+
+.site-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-nav__link {
+  display: block;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--c-line);
+  font-family: var(--font-display);
+  font-weight: 500;
+  color: var(--c-ink);
+  text-decoration: none;
+}
+
+.site-nav__link:hover,
+.site-nav__link.is-active {
+  color: var(--c-blue);
+}
+
+.site-nav__extra {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+/* Selector de idioma */
+.lang-switch {
+  display: flex;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lang-switch a {
+  display: block;
+  padding: 0.35rem 0.55rem;
+  border-radius: 6px;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--c-muted);
+  text-decoration: none;
+}
+
+.lang-switch a:hover {
+  color: var(--c-blue);
+}
+
+.lang-switch a.is-active {
+  background: var(--c-tint-blue);
+  color: var(--c-blue);
+}
+
+/* Menú horizontal en pantallas grandes */
+@media (min-width: 1180px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .site-nav,
+  .no-js .site-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+    position: static;
+    padding: 0;
+    border: 0;
+    box-shadow: none;
+    background: none;
+    max-height: none;
+    overflow: visible;
+  }
+
+  .site-nav__list {
+    display: flex;
+    gap: 1.35rem;
+  }
+
+  .site-nav__link {
+    position: relative;
+    padding: 0.5rem 0;
+    border: 0;
+    font-size: 0.95rem;
+    white-space: nowrap;
+  }
+
+  .site-nav__link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--gradient);
+    transform: scaleX(0);
+    transition: transform var(--transition);
+  }
+
+  .site-nav__link:hover::after,
+  .site-nav__link.is-active::after {
+    transform: scaleX(1);
+  }
+
+  .site-nav__extra {
+    margin: 0;
+  }
+}
+
+/* --- Cabecera de página (páginas interiores) ------------------------ */
+.page-header {
+  position: relative;
+  overflow: hidden;
+  padding-block: clamp(3rem, 7vw, 5.5rem) clamp(2.5rem, 5vw, 4rem);
+  background: var(--gradient-soft);
+}
+
+/* Motivo del «clip» de la marca, decorativo */
+.page-header::after {
+  content: "";
+  position: absolute;
+  right: max(2rem, 8vw);
+  top: -40px;
+  width: 200px;
+  height: 370px;
+  background: url("../img/mark-outline.svg") no-repeat center / contain;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.page-header__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.page-header__title {
+  max-width: 22ch;
+  margin-bottom: 0.4em;
+}
+
+.page-header__lead {
+  max-width: 60ch;
+  margin: 0;
+  font-size: var(--fs-lead);
+  color: var(--c-muted);
+}
+
+@media (max-width: 760px) {
+  .page-header::after {
+    display: none;
+  }
+}
+
+/* --- Secciones ------------------------------------------------------- */
+.block {
+  padding-block: var(--space-section);
+}
+
+/* Dos secciones blancas seguidas no necesitan doble espacio */
+.block + .block:not([class*="bg-tint"]) {
+  padding-top: 0;
+}
+
+.bg-tint {
+  background: var(--c-tint);
+}
+
+.block.bg-tint + .block {
+  padding-top: var(--space-section);
+}
+
+/* --- Pie de página --------------------------------------------------- */
+.site-footer {
+  background: var(--c-footer);
+  color: rgb(255 255 255 / 75%);
+  font-size: 0.95rem;
+}
+
+.site-footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: #9fd8b7;
+}
+
+.site-footer :focus-visible {
+  outline-color: #fff;
+}
+
+.site-footer__grid {
+  display: grid;
+  gap: 2.5rem;
+  padding-block: clamp(3rem, 6vw, 4.5rem);
+}
+
+@media (min-width: 760px) {
+  .site-footer__grid {
+    grid-template-columns: 2fr 1.4fr 1fr 1fr;
+  }
+}
+
+.site-footer__logo {
+  width: auto;
+  height: 52px;
+  margin-bottom: 1.25rem;
+}
+
+.site-footer__about p {
+  max-width: 36ch;
+}
+
+.site-footer__title {
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.site-footer__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-footer__list li {
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+  margin-bottom: 0.7rem;
+}
+
+.site-footer__list .icon {
+  margin-top: 0.25em;
+  color: var(--c-green);
+}
+
+.site-footer__bottom {
+  border-top: 1px solid rgb(255 255 255 / 12%);
+  padding-block: 1.25rem;
+  font-size: var(--fs-small);
+}
+
+.site-footer__bottom p {
+  margin: 0;
+}
+
+.social-links {
+  display: flex;
+  gap: 0.6rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgb(255 255 255 / 25%);
+  border-radius: 50%;
+  transition: background var(--transition), border-color var(--transition);
+}
+
+.social-links a:hover {
+  background: rgb(255 255 255 / 10%);
+  border-color: #fff;
+}

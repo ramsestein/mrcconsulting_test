@@ -1,0 +1,21 @@
+Title: 3rd Course on Multi-organ Ultrasound in the Critically Ill Patient
+
+----
+
+Date: 2019-10-31
+
+----
+
+Excerpt: A course for professionals who want to make ultrasound an advanced tool for solving clinical problems in critically ill patients.
+
+----
+
+Cover: 
+
+----
+
+Text: [{"content":{"level":"h2","text":"Who is it for?"},"id":"bf8be7d7-a673-43b0-abfc-e54ba1fa9fe6","isHidden":false,"type":"heading"},{"content":{"text":"<p>This course is aimed at professionals interested in using ultrasound in critically ill patients to help solve clinical problems.</p>"},"id":"718206a8-efb9-4c87-a4d4-119dc7259b20","isHidden":false,"type":"text"},{"content":{"level":"h2","text":"What for?"},"id":"6173cb9b-8541-4a4d-a34a-7c8f3e720c5a","isHidden":false,"type":"heading"},{"content":{"text":"<p>Our goal is to provide the tools needed to go from a basic level of ultrasound to making it your advanced tool for daily clinical practice.</p>"},"id":"05fed34b-548b-43bf-aaec-d78982ae90a9","isHidden":false,"type":"text"},{"content":{"level":"h2","text":"How?"},"id":"bf2bc4be-fbe8-4981-ab61-dd6e52e7d4de","isHidden":false,"type":"heading"},{"content":{"text":"<p>In this edition we take a qualitative leap by adding vascular, diaphragmatic, abdominal and airway examination to cardiopulmonary ultrasound.</p>"},"id":"9ce71cc1-35c4-4b99-af63-9e8728fcdd85","isHidden":false,"type":"text"}]
+
+----
+
+Uuid: j77isqxpx0hlynys

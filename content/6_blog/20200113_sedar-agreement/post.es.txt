@@ -1,0 +1,21 @@
+Slug: acuerdo-colaboracion-sedar
+
+----
+
+Title: Acuerdo de colaboración con la Sociedad Española de Anestesiología y Reanimación (SEDAR)
+
+----
+
+Date: 2020-01-13
+
+----
+
+Excerpt: La SEDAR y MR&C Consulting firman un acuerdo para potenciar la investigación en anestesiología, cuidados críticos y dolor.
+
+----
+
+Cover: - sedar.jpg
+
+----
+
+Text: [{"content":{"text":"<p>Dentro de los objetivos estratégicos de la SEDAR está el potenciar la investigación en los ámbitos de la anestesiología, los cuidados críticos y el dolor. Con este objetivo, la SEDAR ha firmado un acuerdo de colaboración con la empresa MR&C Consulting, empresa con una cartera de servicios destinados a dar soporte a la investigación biomédica.</p><p>El presente acuerdo pretende favorecer el acceso a estos recursos a los miembros activos de la Sociedad a través de un 10 % de descuento en todos los servicios que MR&C Consulting oferta a través de su página web.</p><p>En el acuerdo de colaboración entre la SEDAR y MR&C Consulting también se incluye una beca a un proyecto de investigación que se otorgará durante el XXXV Congreso Nacional de la SEDAR, que se celebrará en Santiago de Compostela en abril de 2021, y cuyas bases serán definidas por la Comisión Ejecutiva de la SEDAR y publicadas en la página web de la SEDAR y de MR&C Consulting durante el año 2020.</p>"},"id":"f888dfb8-ca78-41a5-a9f5-719b954e4712","isHidden":false,"type":"text"}]

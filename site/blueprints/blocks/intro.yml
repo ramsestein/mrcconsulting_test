@@ -1,0 +1,31 @@
+# Bloque «Introducción»: antetítulo + título + texto. Sirve para abrir
+# cualquier sección o para párrafos destacados.
+# HTML: site/snippets/blocks/intro.php · Estilos: .b-intro
+name: Introducción
+icon: title
+preview: fields
+wysiwyg: true
+fields:
+  eyebrow: fields/eyebrow
+  anchor: fields/anchor
+  title:
+    label: Título
+    type: text
+  text:
+    extends: fields/writer
+  align:
+    label: Alineación
+    type: toggles
+    default: center
+    width: 1/2
+    options:
+      center: Centrado
+      left: Izquierda
+  background:
+    label: Fondo
+    type: toggles
+    default: white
+    width: 1/2
+    options:
+      white: Blanco
+      tint: Color suave

@@ -1,0 +1,39 @@
+# Bloque «Texto + imagen»: dos columnas, texto a un lado e imagen al otro.
+# HTML: site/snippets/blocks/split.php · Estilos: .b-split
+name: Texto + imagen
+icon: layout-columns
+preview: fields
+wysiwyg: true
+fields:
+  eyebrow: fields/eyebrow
+  anchor: fields/anchor
+  title:
+    label: Título
+    type: text
+  text:
+    extends: fields/writer
+  image:
+    label: Imagen
+    type: files
+    max: 1
+    layout: cards
+    query: page.images
+    uploads: image
+    width: 1/2
+  imagePosition:
+    label: Posición de la imagen
+    type: toggles
+    default: right
+    width: 1/4
+    options:
+      left: Izquierda
+      right: Derecha
+  frame:
+    label: Marco decorativo
+    type: toggle
+    default: true
+    width: 1/4
+    text:
+      - "No (imágenes recortadas o con fondo transparente)"
+      - "Sí (fotos)"
+  buttons: fields/buttons

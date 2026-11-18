@@ -1,0 +1,5 @@
+# Campo reutilizable: antetítulo (texto pequeño encima del título).
+label: Antetítulo
+type: text
+width: 2/3
+help: Texto corto que aparece en pequeño encima del título (opcional).

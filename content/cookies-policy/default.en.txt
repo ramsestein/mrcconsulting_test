@@ -1,0 +1,13 @@
+Title: Cookies policy
+
+----
+
+Lead: Last updated: November 2026
+
+----
+
+Blocks: [{"content":{"level":"h2","text":"What are cookies?"},"id":"07496a22-7de0-4538-a575-267c16863f60","isHidden":false,"type":"heading"},{"content":{"text":"<p>Cookies are small files that a website stores in your browser. They can be used for technical purposes (making the website work) or for other purposes such as analytics or advertising.</p>"},"id":"54e628a8-6e34-439e-a3d0-f0ecef18d0d3","isHidden":false,"type":"text"},{"content":{"level":"h2","text":"Cookies used on this website"},"id":"90b87bcd-7064-4664-aa02-e9fa7b90dbf7","isHidden":false,"type":"heading"},{"content":{"text":"<p>This website only uses one technical cookie, which is necessary for it to work:</p><ul><li><strong>kirby_session</strong> · first-party · protects the contact form against fraudulent submissions and keeps the session of the people who edit the website · expires after 2 hours at most.</li></ul><p>We do not use analytics, advertising or third-party cookies. For this reason we do not show a consent banner: technical cookies are exempt under article 22.2 of Spanish Law 34/2002 (LSSI-CE).</p>"},"id":"7df45ea9-7725-4539-a6cb-db98d9193504","isHidden":false,"type":"text"},{"content":{"level":"h2","text":"How to manage cookies"},"id":"f98eac0f-499b-4928-a0fd-a63cef080fef","isHidden":false,"type":"heading"},{"content":{"text":"<p>You can delete or block cookies in your browser settings. If you block the technical cookie, the contact form may not work.</p>"},"id":"5f0debfa-df95-4585-a56b-f5a77638d0c6","isHidden":false,"type":"text"}]
+
+----
+
+Uuid: ahhbmucvlxjmtdzb

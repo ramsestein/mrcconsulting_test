@@ -1,0 +1,85 @@
+/* =====================================================================
+   01 · TOKENS — los valores de la marca en un único sitio
+   ---------------------------------------------------------------------
+   Para cambiar un color, una fuente o un espaciado de TODA la web,
+   se cambia aquí. El resto de archivos solo usan estas variables.
+
+   Orden de los archivos CSS (se cargan en site/snippets/head.php):
+     01-tokens → 02-base → 03-layout → 04-components → 05-blocks → 06-pages
+   ===================================================================== */
+
+/* Fuentes alojadas en la web (licencia SIL Open Font, ver assets/fonts) */
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/inter-latin-wght-normal.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/montserrat-latin-wght-normal.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* --- Colores de la marca (del logo) --- */
+  --c-blue: #106ab1;
+  --c-blue-dark: #0b5590;
+  --c-blue-deep: #0b2a44;
+  --c-green: #4ea272;          /* decorativo (iconos, líneas) */
+  --c-green-text: #2f7d53;     /* verde con contraste suficiente para texto */
+  --c-teal: #2b8a8c;
+
+  /* --- Textos y fondos --- */
+  --c-ink: #0f2536;            /* títulos */
+  --c-text: #2c3e4c;           /* texto normal */
+  --c-muted: #5b6e7c;          /* texto secundario */
+  --c-line: #dde6ec;           /* bordes */
+  --c-bg: #ffffff;
+  --c-tint: #f2f7f6;           /* fondo suave verdoso */
+  --c-tint-blue: #eef4fa;      /* fondo suave azulado */
+  --c-footer: #0b2235;
+  --c-error: #b42318;
+  --c-success: #2f7d53;
+
+  /* Degradado de la marca: azul → turquesa → verde */
+  --gradient: linear-gradient(120deg, #106ab1 0%, #2b8a8c 55%, #4ea272 100%);
+  --gradient-soft: linear-gradient(135deg, #eef4fa 0%, #f2f7f6 100%);
+
+  /* --- Tipografía --- */
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Montserrat", "Inter", system-ui, sans-serif;
+
+  --fs-small: 0.875rem;
+  --fs-base: 1.0625rem;
+  --fs-lead: clamp(1.125rem, 1.6vw, 1.3rem);
+  --fs-h3: clamp(1.2rem, 1.8vw, 1.4rem);
+  --fs-h2: clamp(1.75rem, 3.2vw, 2.5rem);
+  --fs-h1: clamp(2.1rem, 4.6vw, 3.4rem);
+  --fs-hero: clamp(2.2rem, 5.2vw, 3.9rem);
+
+  /* --- Espacios y medidas --- */
+  --container: 1200px;
+  --container-medium: 960px;
+  --container-narrow: 760px;
+  --gutter: clamp(1rem, 4vw, 2rem);
+  --space-section: clamp(3.5rem, 8vw, 6.5rem);
+  --header-height: 80px;
+
+  /* --- Bordes y sombras --- */
+  --radius: 16px;
+  --radius-sm: 10px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+  --shadow-sm: 0 1px 2px rgb(15 37 54 / 6%), 0 1px 3px rgb(15 37 54 / 8%);
+  --shadow: 0 12px 32px -14px rgb(15 37 54 / 22%);
+  --shadow-lg: 0 24px 60px -24px rgb(15 37 54 / 30%);
+
+  /* --- Movimiento --- */
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --transition: 180ms var(--ease);
+}

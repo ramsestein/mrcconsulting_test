@@ -1,0 +1,9 @@
+# Campo reutilizable: «ancla» de una sección.
+# Permite enlazar directamente a la sección desde el menú,
+# p. ej. /en/about-us#mission  →  ancla = mission
+label: Ancla (opcional)
+type: slug
+width: 1/3
+icon: anchor
+help: Nombre corto sin espacios para enlazar a esta sección desde el menú (p. ej. «mission»).
+translate: false

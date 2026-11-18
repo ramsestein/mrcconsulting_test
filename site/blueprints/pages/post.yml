@@ -1,0 +1,63 @@
+# Entrada del blog. Plantilla: site/templates/post.php
+title: Entrada del blog
+icon: document
+
+# El número de orden de la carpeta es la fecha (AAAAMMDD)
+num: date
+
+status:
+  draft:
+    label: Borrador
+    text: No se ve en la web.
+  listed:
+    label: Publicada
+    text: Visible en el blog.
+
+tabs:
+  content:
+    label: Contenido
+    icon: text
+    columns:
+      main:
+        width: 3/4
+        fields:
+          excerpt:
+            label: Resumen
+            type: textarea
+            buttons: false
+            maxlength: 300
+            help: Aparece en la lista del blog. Una o dos frases.
+          text:
+            label: Texto de la entrada
+            type: blocks
+            fieldsets:
+              - heading
+              - text
+              - list
+              - image
+              - gallery
+              - quote
+      sidebar:
+        width: 1/4
+        fields:
+          date:
+            label: Fecha de publicación
+            type: date
+            required: true
+            default: today
+            display: DD/MM/YYYY
+            translate: false
+          cover:
+            label: Imagen principal
+            type: files
+            max: 1
+            layout: cards
+            query: page.images
+            uploads: image
+        sections:
+          images:
+            label: Imágenes de esta entrada
+            type: files
+            layout: cards
+            template: image
+  seo: tabs/seo

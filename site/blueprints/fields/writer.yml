@@ -1,0 +1,13 @@
+# Campo reutilizable: texto con formato básico.
+# Se limitan las opciones para que el diseño sea siempre coherente.
+label: Texto
+type: writer
+marks:
+  - bold
+  - italic
+  - link
+  - email
+nodes:
+  - paragraph
+  - bulletList
+  - orderedList

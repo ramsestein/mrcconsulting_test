@@ -1,0 +1,12 @@
+# Imágenes subidas en el panel.
+title: Imagen
+
+accept:
+  mime: image/jpeg, image/png, image/webp, image/svg+xml
+  maxsize: 8000000
+
+fields:
+  alt:
+    label: Texto alternativo
+    type: text
+    help: Describe la imagen en pocas palabras (lo leen los lectores de pantalla y Google).

@@ -1,0 +1,13 @@
+Title: Help
+
+----
+
+Lead: Answers to common questions and how to work with us.
+
+----
+
+Blocks: [{"content":{"eyebrow":"How can we help you?","anchor":"faq","title":"Frequently asked questions","items":[{"question":"Can you support only one part of my study?","answer":"<p>Yes. We can support you at every stage, from study concept to publication, or only where you need us: for example, only the statistics, the database or the regulatory submissions.</p>"},{"question":"Do you work with academic groups with limited resources?","answer":"<p>Yes. We understand academic research and know that many research groups have limited resources and need flexible support tailored to their needs. Our fees distinguish between research with and without private funding.</p>"},{"question":"Do you also work with medical device companies?","answer":"<p>Yes. We support manufacturers, innovators and healthcare institutions with clinical investigations, clinical evaluation, post-market clinical follow-up (PMCF) and MDR compliance.</p>"},{"question":"How much do your services cost?","answer":"<p>You can check our reference fees on the <a href=\"/en/pricing\">Pricing</a> page. Every project is different, so the best option is to tell us about your study and we will send you a tailored quote.</p>"},{"question":"What information should I include when I contact you?","answer":"<p>It helps us to know the type of organisation, the type of study, the number of sites and the stage the project is at. You will find these fields in the contact form.</p>"}]},"id":"f1ffee34-02f2-440b-a5fb-1d6514e290a4","isHidden":false,"type":"faq"},{"content":{"eyebrow":"Join us","anchor":"work-with-us","title":"Work with us","text":"<p>Are you a clinical research professional, statistician, scientific writer, translator, designer or developer? We are always happy to meet talented people.</p><p>Send your CV to <a href=\"mailto:info@mrcconsulting.es\">info@mrcconsulting.es</a>, telling us about your education and field of expertise.</p>","align":"center","background":"tint"},"id":"6a05f990-5fda-406a-aefc-1c73abf8452d","isHidden":false,"type":"intro"},{"content":{"title":"Can’t find what you are looking for?","text":"Write to us and we will get back to you as soon as possible.","buttons":[{"label":"Contact us","link":"page://4nh5spkw6j1fnmzm","topic":"","style":"primary"}],"color":"light"},"id":"6d96b24c-f4f5-49a9-a1e4-396b0a8de277","isHidden":false,"type":"cta"}]
+
+----
+
+Uuid: ndbjndm01ttzbdli

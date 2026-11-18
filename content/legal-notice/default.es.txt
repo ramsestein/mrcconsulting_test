@@ -1,0 +1,13 @@
+Slug: aviso-legal
+
+----
+
+Title: Aviso legal
+
+----
+
+Lead: 
+
+----
+
+Blocks: [{"content":{"level":"h2","text":"Titular del sitio web"},"id":"76fcba84-59e6-4ed0-af34-ead5f324b5a6","isHidden":false,"type":"heading"},{"content":{"text":"<p>En cumplimiento del artículo 10 de la Ley 34/2002, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se informa de que el titular de este sitio web es:</p><ul><li>Razón social: Medical Research and Clinical Consulting, S.L. (MR&C Consulting)</li><li>NIF: B67471888</li><li>Domicilio social: Passatge de la Mossota, 26, 2.º [población y código postal pendientes de completar]</li><li>Correo electrónico: <a href=\"mailto:info@mrcconsulting.es\">info@mrcconsulting.es</a></li><li>Datos registrales: [pendiente de completar]</li></ul>"},"id":"fb7800df-3855-4a94-ae89-e2335322099e","isHidden":false,"type":"text"},{"content":{"level":"h2","text":"Condiciones de uso"},"id":"9f4dd1cb-50d2-4999-a037-749daa525bea","isHidden":false,"type":"heading"},{"content":{"text":"<p>El acceso a este sitio web es gratuito e implica la aceptación de estas condiciones. El usuario se compromete a hacer un uso adecuado del sitio y de sus contenidos, conforme a la ley, la buena fe y el orden público.</p>"},"id":"888b2e96-9f5b-4343-a677-4c008103c0c6","isHidden":false,"type":"text"},{"content":{"level":"h2","text":"Propiedad intelectual e industrial"},"id":"5dc739fc-1360-4472-ab50-f9d9bdd7ca98","isHidden":false,"type":"heading"},{"content":{"text":"<p>Los contenidos de este sitio web (textos, imágenes, logotipos, diseño gráfico y código fuente) son titularidad de MR&C Consulting o de terceros que han autorizado su uso. Queda prohibida su reproducción, distribución o modificación sin autorización expresa.</p>"},"id":"63fb8d4d-ff4c-415c-a88a-63a0c2b859e9","isHidden":false,"type":"text"},{"content":{"level":"h2","text":"Responsabilidad"},"id":"61cd6efe-d984-41bd-a41b-c7f46907f10b","isHidden":false,"type":"heading"},{"content":{"text":"<p>MR&C Consulting trabaja para que la información de este sitio sea correcta y esté actualizada, pero no puede garantizar la ausencia de errores ni se hace responsable de los daños derivados de su uso. Tampoco se responsabiliza del contenido de sitios web de terceros enlazados desde esta web.</p>"},"id":"2ef44bf4-c198-4065-a6a8-630fa4e80a02","isHidden":false,"type":"text"},{"content":{"level":"h2","text":"Legislación aplicable"},"id":"35a0c872-54fc-45ec-abae-1c6061660c55","isHidden":false,"type":"heading"},{"content":{"text":"<p>Este aviso legal se rige por la legislación española.</p>"},"id":"f63f39c2-d308-419a-a3aa-70c80e1d4616","isHidden":false,"type":"text"}]

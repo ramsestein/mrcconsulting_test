@@ -1,0 +1,134 @@
+# =====================================================================
+#  .htaccess · Reglas del servidor web (Apache, IONOS)
+# ---------------------------------------------------------------------
+#  Basado en el .htaccess oficial de Kirby, con cuatro añadidos:
+#    1. HTTPS obligatorio
+#    2. Redirecciones de las direcciones de la web antigua (WordPress)
+#    3. Bloqueo de las carpetas internas (content, site, kirby, docs…)
+#    4. Cabeceras de seguridad y caché del navegador
+#
+#  La política de seguridad de contenidos (CSP) NO está aquí: la añade
+#  PHP solo en las páginas públicas (site/plugins/mrc/index.php) para no
+#  interferir con el panel de edición.
+#
+#  Más información: docs/despliegue-ionos.md
+# =====================================================================
+
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+
+RewriteEngine on
+
+# Si alguna regla no funcionara en el servidor, descomentar:
+# RewriteBase /
+
+# ---------------------------------------------------------------------
+# 1. HTTPS obligatorio (no se aplica en el ordenador de desarrollo)
+# ---------------------------------------------------------------------
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTP_HOST} !^(localhost|127\.0\.0\.1)(:\d+)?$
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Quitar la barra final de las direcciones (/es/blog/ → /es/blog)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)/$ /$1 [L,R=301]
+
+# ---------------------------------------------------------------------
+# 2. Direcciones de la web antigua (WordPress) → páginas nuevas
+#    Evita enlaces rotos y conserva el posicionamiento en Google.
+# ---------------------------------------------------------------------
+RewriteRule ^en/homepage-mrcconsulting$ /en [L,R=301]
+RewriteRule ^en/blog-2$ /en/blog [L,R=301]
+RewriteRule ^en/new-website$ /en [L,R=301]
+RewriteRule ^landingmrc$ / [L,R=301]
+RewriteRule ^tarifas$ /es/tarifas [L,R=301]
+RewriteRule ^politica-privacidad$ /es/politica-de-privacidad [L,R=301]
+RewriteRule ^politica-cookies$ /es/politica-de-cookies [L,R=301]
+RewriteRule ^blog$ /es/blog [L,R=301]
+RewriteRule ^iii-curso-ecografia$ /es/blog/iii-curso-ecografia [L,R=301]
+RewriteRule ^acuerdo-de-colaboracion-con-sociedad-espanola-de-anestesiologia-y-reanimacion-sedar$ /es/blog/acuerdo-colaboracion-sedar [L,R=301]
+
+# Contenido de demostración del tema antiguo y rutas de WordPress:
+# ya no existen (410 = «eliminado para siempre», Google deja de buscarlas)
+RewriteRule ^(portfolio|wbc-reuseables)(/.*)?$ - [G]
+RewriteRule ^(homepage-freelancer|quote-format|get-907-now|video-post-format|freelancing-freedom|successful-mailing-list-tips|project-scope-and-planning|keeping-up-with-trends)$ - [G]
+RewriteRule ^(wp-admin|wp-content|wp-includes|wp-json)(/.*)?$ - [G]
+RewriteRule ^(wp-login\.php|xmlrpc\.php|wp-cron\.php)$ - [G]
+
+# ---------------------------------------------------------------------
+# 3. Carpetas y archivos internos: nunca accesibles desde el navegador
+# ---------------------------------------------------------------------
+# Archivos y carpetas que empiezan por punto (.git, .license…),
+# excepto .well-known (certificados SSL y security.txt)
+RewriteRule (^|/)\.(?!well-known\/) index.php [L]
+
+# Contenido, código propio, núcleo de Kirby, documentación y herramientas
+RewriteRule ^content/(.*) index.php [L]
+RewriteRule ^site/(.*) index.php [L]
+RewriteRule ^kirby/(.*) index.php [L]
+RewriteRule ^(docs|tools)/(.*) index.php [L]
+RewriteRule ^(README\.md|composer\.(json|lock))$ index.php [L]
+
+# Todo lo demás lo resuelve Kirby (direcciones bonitas)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*) index.php [L]
+
+</IfModule>
+
+# Pasar la cabecera de autorización a PHP (necesario para el panel)
+SetEnvIf Authorization "(.+)" HTTP_AUTHORIZATION=$1
+
+# ---------------------------------------------------------------------
+# Compresión de las respuestas de texto
+# ---------------------------------------------------------------------
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/plain text/html text/css text/xml
+AddOutputFilterByType DEFLATE text/javascript application/javascript application/json
+AddOutputFilterByType DEFLATE application/xml image/svg+xml
+</IfModule>
+
+# ---------------------------------------------------------------------
+# 4a. Cabeceras de seguridad (todas las respuestas)
+# ---------------------------------------------------------------------
+<IfModule mod_headers.c>
+
+# Archivos de tipo desconocido se sirven como texto (evita ejecutar subidas maliciosas)
+Header set Content-Type "text/plain" "expr=-z %{CONTENT_TYPE}"
+Header set X-Content-Type-Options "nosniff"
+
+# El navegador solo hablará con la web por HTTPS durante un año
+Header always set Strict-Transport-Security "max-age=31536000"
+
+# No permitir que otras webs metan esta dentro de un marco (clickjacking)
+Header always set X-Frame-Options "SAMEORIGIN"
+
+# No filtrar direcciones completas a otras webs
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+# La web no usa cámara, micrófono ni ubicación
+Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
+
+# No anunciar la versión de PHP
+Header always unset X-Powered-By
+Header unset X-Powered-By
+
+</IfModule>
+
+# ---------------------------------------------------------------------
+# 4b. Caché del navegador para archivos estáticos
+#     (los CSS y JS llevan ?v=fecha, así que los cambios se ven al momento)
+# ---------------------------------------------------------------------
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType text/css "access plus 1 month"
+ExpiresByType text/javascript "access plus 1 month"
+ExpiresByType application/javascript "access plus 1 month"
+ExpiresByType image/svg+xml "access plus 1 month"
+ExpiresByType image/png "access plus 1 month"
+ExpiresByType image/jpeg "access plus 1 month"
+ExpiresByType image/webp "access plus 1 month"
+ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>

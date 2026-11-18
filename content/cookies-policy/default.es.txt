@@ -1,0 +1,13 @@
+Slug: politica-de-cookies
+
+----
+
+Title: Política de cookies
+
+----
+
+Lead: Última actualización: noviembre de 2026
+
+----
+
+Blocks: [{"content":{"level":"h2","text":"¿Qué son las cookies?"},"id":"07496a22-7de0-4538-a575-267c16863f60","isHidden":false,"type":"heading"},{"content":{"text":"<p>Las cookies son pequeños archivos que una web guarda en tu navegador. Pueden usarse con fines técnicos (para que la web funcione) o con otros fines, como la analítica o la publicidad.</p>"},"id":"54e628a8-6e34-439e-a3d0-f0ecef18d0d3","isHidden":false,"type":"text"},{"content":{"level":"h2","text":"Cookies que utiliza esta web"},"id":"90b87bcd-7064-4664-aa02-e9fa7b90dbf7","isHidden":false,"type":"heading"},{"content":{"text":"<p>Esta web solo utiliza una cookie técnica, necesaria para su funcionamiento:</p><ul><li><strong>kirby_session</strong> · propia · protege el formulario de contacto frente a envíos fraudulentos y mantiene la sesión de las personas que editan la web · caduca como máximo a las 2 horas.</li></ul><p>No utilizamos cookies de analítica, de publicidad ni de terceros. Por eso no mostramos un aviso de consentimiento: las cookies técnicas están exentas según el artículo 22.2 de la Ley 34/2002 (LSSI-CE).</p>"},"id":"7df45ea9-7725-4539-a6cb-db98d9193504","isHidden":false,"type":"text"},{"content":{"level":"h2","text":"Cómo gestionar las cookies"},"id":"f98eac0f-499b-4928-a0fd-a63cef080fef","isHidden":false,"type":"heading"},{"content":{"text":"<p>Puedes borrar o bloquear las cookies desde la configuración de tu navegador. Si bloqueas la cookie técnica, es posible que el formulario de contacto no funcione.</p>"},"id":"5f0debfa-df95-4585-a56b-f5a77638d0c6","isHidden":false,"type":"text"}]

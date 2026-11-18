@@ -1,0 +1,41 @@
+# =====================================================================
+#  Archivos que NO se guardan en git
+#  (este repositorio solo existe durante el desarrollo y la aprobación)
+# =====================================================================
+
+# Sistema y editores
+.DS_Store
+Thumbs.db
+Icon
+*.sublime-workspace
+/.vscode
+/.idea
+
+# Archivos generados por Kirby (se regeneran solos)
+/media/*
+!/media/index.html
+.lock
+
+# -------------------- SEGURIDAD: NUNCA EN GIT --------------------
+# Usuarios del panel (contraseñas cifradas)
+/site/accounts/*
+!/site/accounts/index.html
+
+# Sesiones y caché
+/site/sessions/*
+!/site/sessions/index.html
+/site/cache/*
+!/site/cache/index.html
+
+# Licencia de Kirby (se activa en el panel del servidor)
+/site/config/.license
+
+# Configuración propia del servidor (contraseñas SMTP, etc.)
+/site/config/config.mrcconsulting.es.php
+/site/config/config.www.mrcconsulting.es.php
+
+# Registros locales del formulario en modo prueba
+/site/logs/
+
+# Copia estática generada para la vista previa de GitHub Pages
+/_site/

@@ -1,0 +1,641 @@
+/* =====================================================================
+   05 · BLOQUES — estilos de cada bloque del panel
+   Cada bloque tiene su sección con el mismo nombre que su archivo:
+     site/snippets/blocks/NOMBRE.php  →  .b-NOMBRE
+   ===================================================================== */
+
+/* =====================================================================
+   Portada (hero)
+   ===================================================================== */
+.b-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: min(84vh, 760px);
+  padding-block: clamp(5rem, 12vw, 8rem);
+  overflow: hidden;
+  background: var(--c-blue-deep);
+  color: #fff;
+}
+
+.b-hero__media {
+  position: absolute;
+  inset: 0;
+}
+
+.b-hero__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 65% center;
+}
+
+/* Velo de color para que el texto se lea sobre la foto */
+.b-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(100deg, rgb(11 42 68 / 92%) 0%, rgb(11 42 68 / 78%) 42%, rgb(16 106 177 / 25%) 100%);
+}
+
+.b-hero__inner {
+  position: relative;
+  z-index: 2;
+}
+
+.b-hero__title {
+  max-width: 20ch;
+  margin-bottom: 0.5em;
+  font-size: var(--fs-hero);
+  line-height: 1.1;
+  color: #fff;
+}
+
+.b-hero__subtitle {
+  max-width: 52ch;
+  margin: 0;
+  font-size: var(--fs-lead);
+  color: rgb(255 255 255 / 88%);
+}
+
+.b-hero :focus-visible {
+  outline-color: #fff;
+}
+
+/* =====================================================================
+   Introducción
+   ===================================================================== */
+.b-intro .section-heading {
+  margin-bottom: 0;
+}
+
+.b-intro--left .section-heading {
+  max-width: none;
+}
+
+/* =====================================================================
+   Texto + imagen
+   ===================================================================== */
+.b-split__grid {
+  display: grid;
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .b-split__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .b-split--image-left .b-split__media {
+    order: -1;
+  }
+}
+
+.b-split .section-heading {
+  margin-bottom: 0;
+}
+
+.b-split__media {
+  position: relative;
+  margin: 0;
+}
+
+.b-split__media img {
+  width: 100%;
+}
+
+/* Con marco: esquinas redondeadas, sombra y forma de color detrás
+   (recuerda al logo). Sin marco: la imagen tal cual. */
+.b-split--framed .b-split__media {
+  isolation: isolate;
+}
+
+.b-split--framed .b-split__media img {
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.b-split--framed .b-split__media::before {
+  content: "";
+  position: absolute;
+  inset: 12% -4% -6% 18%;
+  z-index: -1;
+  border-radius: 200px 200px var(--radius-lg) var(--radius-lg);
+  background: var(--gradient);
+  opacity: 0.9;
+}
+
+.b-split--framed.b-split--image-left .b-split__media::before {
+  inset: 12% 18% -6% -4%;
+}
+
+/* =====================================================================
+   Tarjetas
+   ===================================================================== */
+.b-cards--numbered .card {
+  border: 0;
+  box-shadow: none;
+  background: transparent;
+  padding-inline: 0;
+}
+
+.b-cards--numbered .card__title {
+  color: var(--c-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.b-cards--highlight .card {
+  border: 0;
+  background: var(--gradient);
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+
+.b-cards--highlight .card:nth-child(3n + 2) {
+  background: linear-gradient(120deg, #0b5590, #106ab1);
+}
+
+.b-cards--highlight .card:nth-child(3n + 3) {
+  background: linear-gradient(120deg, #2b8a8c, #4ea272);
+}
+
+.b-cards--highlight .card__title,
+.b-cards--highlight .card__text,
+.b-cards--highlight strong {
+  color: #fff;
+}
+
+.b-cards--highlight .card__text {
+  opacity: 0.92;
+}
+
+.b-cards--highlight .card__link {
+  color: #fff;
+}
+
+.b-cards--highlight .card__link:hover {
+  color: #e9f5ef;
+}
+
+.b-cards--highlight :focus-visible {
+  outline-color: #fff;
+}
+
+.b-cards--highlight .card {
+  display: flex;
+  flex-direction: column;
+}
+
+.b-cards--highlight .card__link {
+  margin-top: auto;
+  padding-top: 1.25rem;
+}
+
+/* =====================================================================
+   Grupo de servicios
+   ===================================================================== */
+/* Varios grupos seguidos: línea separadora entre ellos */
+.block.b-services + .block.b-services {
+  padding-top: var(--space-section);
+  border-top: 1px solid var(--c-line);
+}
+
+@media (min-width: 1000px) {
+  .b-services .container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .b-services__head {
+    position: sticky;
+    top: calc(var(--header-height) + 2rem);
+  }
+}
+
+.b-services__head .section-heading {
+  margin-bottom: 1rem;
+}
+
+.b-services__subtitle {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--c-blue);
+}
+
+.b-services__intro {
+  color: var(--c-muted);
+}
+
+.b-services__list {
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 1000px) {
+  .b-services__list {
+    margin-top: 0;
+  }
+}
+
+.service {
+  border: 1px solid var(--c-line);
+  border-radius: var(--radius);
+  background: #fff;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition), border-color var(--transition);
+}
+
+.service[open],
+.service:hover {
+  border-color: #c3d6e4;
+  box-shadow: var(--shadow);
+}
+
+.service__summary {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.25rem 1rem;
+  padding: 1.35rem 1.5rem;
+}
+
+.service__summary .icon {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  padding: 0.25rem;
+  border-radius: 50%;
+  background: var(--c-tint-blue);
+  color: var(--c-blue);
+}
+
+.service__title {
+  display: block;
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--c-ink);
+}
+
+.service__lead {
+  display: block;
+  color: var(--c-muted);
+}
+
+.service__body {
+  padding: 0 1.5rem 1.5rem;
+}
+
+.service__list-title {
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  color: var(--c-ink);
+}
+
+.service__closing {
+  margin: 1rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--c-line);
+  color: var(--c-muted);
+}
+
+.service .btn {
+  margin-top: 1.25rem;
+}
+
+/* Presentación «todo visible» */
+.b-services--open .service {
+  padding: 1.5rem 1.5rem 0;
+}
+
+.b-services--open .service__title {
+  margin-bottom: 0.35rem;
+}
+
+.b-services--open .service__body {
+  padding-inline: 0;
+  padding-top: 1rem;
+}
+
+/* =====================================================================
+   Proceso (pasos)
+   ===================================================================== */
+/* El fondo suave lo da la clase .bg-tint (03-layout.css) */
+
+.steps {
+  position: relative;
+  display: grid;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+}
+
+/* Línea vertical (móvil) */
+.steps::before {
+  content: "";
+  position: absolute;
+  left: 1.35rem;
+  top: 1rem;
+  bottom: 1rem;
+  width: 3px;
+  border-radius: 3px;
+  background: var(--gradient);
+}
+
+.step {
+  position: relative;
+  display: grid;
+  grid-template-columns: 2.75rem 1fr;
+  gap: 0 1rem;
+  align-items: center;
+  counter-increment: step;
+}
+
+.step__dot {
+  grid-row: 1 / span 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid var(--c-blue);
+  box-shadow: 0 0 0 6px var(--c-tint);
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--c-blue);
+  position: relative;
+  z-index: 1;
+}
+
+.step:nth-child(even) .step__dot {
+  border-color: var(--c-green);
+  color: var(--c-green-text);
+}
+
+.step__dot::before {
+  content: counter(step);
+}
+
+.step__title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--c-ink);
+  line-height: 1.3;
+}
+
+.step__text {
+  grid-column: 2;
+  font-size: var(--fs-small);
+  color: var(--c-muted);
+}
+
+/* Línea horizontal (pantallas grandes): cada paso dibuja el tramo
+   que lo une con el siguiente */
+@media (min-width: 900px) {
+  .steps {
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  .steps::before {
+    display: none;
+  }
+
+  .step:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: calc(1.375rem - 1.5px);
+    left: 50%;
+    width: calc(100% + 1rem);
+    height: 3px;
+    background: var(--gradient);
+  }
+
+  .step {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: start;
+    text-align: center;
+    gap: 0.9rem;
+  }
+
+  .step__dot {
+    grid-row: auto;
+  }
+
+  .step__text {
+    grid-column: auto;
+  }
+}
+
+.b-steps__closing {
+  max-width: 46ch;
+  margin: clamp(2.5rem, 5vw, 3.5rem) auto 0;
+  font-family: var(--font-display);
+  font-size: var(--fs-lead);
+  font-weight: 600;
+  text-align: center;
+  color: var(--c-blue);
+}
+
+/* =====================================================================
+   Equipo
+   ===================================================================== */
+.team-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+}
+
+.person {
+  padding: 2rem;
+  background: #fff;
+  border: 1px solid var(--c-line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.person__avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 88px;
+  height: 88px;
+  margin-bottom: 1.25rem;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--gradient);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.person__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.person__name {
+  margin-bottom: 0.2rem;
+}
+
+.person__role {
+  margin-bottom: 1rem;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--c-green-text);
+}
+
+.person__bio {
+  font-size: 0.97rem;
+  color: var(--c-muted);
+}
+
+/* =====================================================================
+   Llamada a la acción
+   ===================================================================== */
+.b-cta__box {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(2.5rem, 6vw, 4.5rem) clamp(1.5rem, 5vw, 4rem);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  color: #fff;
+  background: var(--gradient);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Motivo del «clip» en blanco muy suave */
+.b-cta__box::after {
+  content: "";
+  position: absolute;
+  right: -30px;
+  bottom: -120px;
+  width: 220px;
+  height: 400px;
+  background: url("../img/mark-outline.svg") no-repeat center / contain;
+  opacity: 0.25;
+  filter: brightness(0) invert(1);
+  pointer-events: none;
+}
+
+.b-cta--blue .b-cta__box {
+  background: linear-gradient(120deg, var(--c-blue-deep), var(--c-blue));
+}
+
+.b-cta--light .b-cta__box {
+  background: var(--gradient-soft);
+  border: 1px solid var(--c-line);
+  color: var(--c-text);
+  box-shadow: none;
+}
+
+.b-cta--light .b-cta__box::after {
+  filter: none;
+}
+
+.b-cta__title {
+  max-width: 28ch;
+  margin-inline: auto;
+  color: inherit;
+}
+
+.b-cta--light .b-cta__title {
+  color: var(--c-ink);
+}
+
+.b-cta__text {
+  max-width: 56ch;
+  margin: 0 auto;
+  font-size: var(--fs-lead);
+  opacity: 0.92;
+}
+
+.b-cta .btn-row {
+  justify-content: center;
+}
+
+.b-cta :focus-visible {
+  outline-color: #fff;
+}
+
+.b-cta--light :focus-visible {
+  outline-color: var(--c-blue);
+}
+
+/* =====================================================================
+   Preguntas frecuentes
+   ===================================================================== */
+.faq {
+  border-bottom: 1px solid var(--c-line);
+}
+
+.faq__question {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 0;
+  font-family: var(--font-display);
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: var(--c-ink);
+}
+
+.faq__question .icon {
+  margin-top: 0.15rem;
+  color: var(--c-blue);
+}
+
+.faq__answer {
+  padding-bottom: 1.25rem;
+  color: var(--c-muted);
+}
+
+/* =====================================================================
+   Tabla de precios
+   ===================================================================== */
+.b-pricing__title {
+  font-size: clamp(1.4rem, 2.4vw, 1.8rem);
+  margin-bottom: 1rem;
+}
+
+.b-pricing__intro {
+  margin-bottom: 1.5rem;
+  color: var(--c-muted);
+}
+
+.b-pricing__notes {
+  margin-top: 1rem;
+  font-size: var(--fs-small);
+  color: var(--c-muted);
+}
+
+.b-pricing__notes p {
+  margin-bottom: 0.25rem;
+}
+
+/* =====================================================================
+   Bloques de texto sencillo (grupo de párrafos)
+   ===================================================================== */
+.block--prose + .block--prose {
+  padding-top: 0;
+}

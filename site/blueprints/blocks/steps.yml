@@ -1,0 +1,34 @@
+# Bloque «Proceso / línea de tiempo»: pasos numerados en orden
+# (p. ej. «De la idea al impacto»).
+# HTML: site/snippets/blocks/steps.php · Estilos: .b-steps
+name: Proceso (pasos)
+icon: road-sign
+preview: fields
+wysiwyg: true
+fields:
+  eyebrow: fields/eyebrow
+  anchor: fields/anchor
+  title:
+    label: Título
+    type: text
+  intro:
+    extends: fields/writer
+    label: Texto de introducción
+  steps:
+    label: Pasos
+    type: structure
+    columns:
+      title: true
+    fields:
+      title:
+        label: Paso
+        type: text
+        required: true
+      text:
+        label: Descripción breve (opcional)
+        type: textarea
+        buttons: false
+  closing:
+    label: Frase final
+    type: text
+    help: Aparece destacada debajo de los pasos.

@@ -1,0 +1,62 @@
+# =====================================================================
+#  Vista previa en GitHub Pages (SOLO durante el desarrollo/aprobación)
+# ---------------------------------------------------------------------
+#  Cada vez que se sube un cambio a la rama main:
+#    1. Se arranca Kirby con PHP en el servidor de GitHub
+#    2. tools/export-static.php genera una copia estática de la web
+#    3. Se publica en https://<usuario>.github.io/<repositorio>/
+#
+#  La web real (IONOS) no depende de esto. Esta carpeta .github NO se
+#  sube al servidor.
+# =====================================================================
+name: Vista previa (GitHub Pages)
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar el código
+        uses: actions/checkout@v4
+
+      - name: Instalar PHP 8.4
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.4"
+          extensions: gd, intl, mbstring, curl
+          coverage: none
+
+      - name: Generar la copia estática
+        run: php tools/export-static.php --base="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}" --out=_site
+
+      - name: Configurar GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Subir la copia
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publicar
+        id: deployment
+        uses: actions/deploy-pages@v4

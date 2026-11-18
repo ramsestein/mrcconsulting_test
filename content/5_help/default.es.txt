@@ -1,0 +1,13 @@
+Slug: ayuda
+
+----
+
+Title: Ayuda
+
+----
+
+Lead: Respuestas a las preguntas más habituales y cómo trabajar con nosotros.
+
+----
+
+Blocks: [{"content":{"eyebrow":"¿Cómo podemos ayudarte?","anchor":"faq","title":"Preguntas frecuentes","items":[{"question":"¿Podéis ayudarme solo en una parte de mi estudio?","answer":"<p>Sí. Podemos acompañarte en todas las etapas, desde la idea del estudio hasta su publicación, o solo donde nos necesites: por ejemplo, solo la estadística, la base de datos o los trámites regulatorios.</p>"},{"question":"¿Trabajáis con grupos académicos con pocos recursos?","answer":"<p>Sí. Entendemos la investigación académica y sabemos que muchos grupos tienen recursos limitados y necesitan un apoyo flexible y adaptado. Nuestras tarifas distinguen entre investigación con y sin financiación privada.</p>"},{"question":"¿También trabajáis con empresas de productos sanitarios?","answer":"<p>Sí. Ayudamos a fabricantes, innovadores e instituciones sanitarias con investigaciones clínicas, evaluación clínica, seguimiento clínico poscomercialización (PMCF) y cumplimiento del MDR.</p>"},{"question":"¿Cuánto cuestan vuestros servicios?","answer":"<p>Puedes consultar nuestras tarifas de referencia en la página de <a href=\"/es/tarifas\">Tarifas</a>. Cada proyecto es diferente, así que lo mejor es que nos cuentes tu estudio y te enviaremos un presupuesto a medida.</p>"},{"question":"¿Qué información debo incluir al contactar con vosotros?","answer":"<p>Nos ayuda conocer el tipo de organización, el tipo de estudio, el número de centros y la fase en la que se encuentra el proyecto. Encontrarás estos campos en el formulario de contacto.</p>"}]},"id":"f1ffee34-02f2-440b-a5fb-1d6514e290a4","isHidden":false,"type":"faq"},{"content":{"eyebrow":"Únete","anchor":"work-with-us","title":"Trabaja con nosotros","text":"<p>¿Eres profesional de la investigación clínica, estadístico, redactor científico, traductor, diseñador o desarrollador? Siempre nos alegra conocer a personas con talento.</p><p>Envía tu CV a <a href=\"mailto:info@mrcconsulting.es\">info@mrcconsulting.es</a> indicando tu formación y tu área de conocimiento.</p>","align":"center","background":"tint"},"id":"6a05f990-5fda-406a-aefc-1c73abf8452d","isHidden":false,"type":"intro"},{"content":{"title":"¿No encuentras lo que buscas?","text":"Escríbenos y te responderemos lo antes posible.","buttons":[{"label":"Contacta con nosotros","link":"page://4nh5spkw6j1fnmzm","topic":"","style":"primary"}],"color":"light"},"id":"6d96b24c-f4f5-49a9-a1e4-396b0a8de277","isHidden":false,"type":"cta"}]

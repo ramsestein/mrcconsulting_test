@@ -1,0 +1,94 @@
+Title: MR&C Consulting
+
+----
+
+Menu:
+
+- 
+  label: Inicio
+  link: page://4khedeklqxnb82ue
+  anchor: ""
+- 
+  label: Sobre nosotros
+  link: page://fbepzu5gdx90hwcj
+  anchor: ""
+- 
+  label: Misión y visión
+  link: page://fbepzu5gdx90hwcj
+  anchor: mission
+- 
+  label: Servicios
+  link: page://ihwqrvgrylgatczs
+  anchor: ""
+- 
+  label: Para investigadores
+  link: page://tid3ibrwcydrn30r
+  anchor: ""
+- 
+  label: Ayuda
+  link: page://ndbjndm01ttzbdli
+  anchor: ""
+- 
+  label: Tarifas
+  link: page://mzrvkmhmqd7hzfyh
+  anchor: ""
+- 
+  label: Blog
+  link: page://dr3jxwop0lhbvmcu
+  anchor: ""
+
+----
+
+Ctalabel: Contacto
+
+----
+
+Ctalink: page://4nh5spkw6j1fnmzm
+
+----
+
+Footertext: Un equipo multidisciplinar de médicos, investigadores, farmacéuticos, estadísticos, bioingenieros, traductores y diseñadores que acompaña a investigadores, hospitales y empresas desde la idea del estudio hasta su publicación.
+
+----
+
+Email: info@mrcconsulting.es
+
+----
+
+Phone: 
+
+----
+
+Address: 
+
+----
+
+Social:
+
+- 
+  network: x
+  url: https://twitter.com/_mrcconsulting
+
+----
+
+Legalpages:
+
+- page://i1sybhnrrye1x74z
+- page://42i0xmiwa5xqm3xh
+- page://ahhbmucvlxjmtdzb
+
+----
+
+Formrecipient: info@mrcconsulting.es
+
+----
+
+Formsubject: Nuevo mensaje desde la web
+
+----
+
+Metadescription: Soluciones de investigación clínica para investigadores académicos y empresas de productos sanitarios: gestión de proyectos, monitorización, asuntos regulatorios, gestión de datos, bioestadística y comunicación científica.
+
+----
+
+Ogimage: - og-image.jpg

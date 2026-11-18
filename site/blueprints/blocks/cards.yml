@@ -1,0 +1,61 @@
+# Bloque «Tarjetas»: rejilla de tarjetas (valores, ventajas, servicios…).
+# HTML: site/snippets/blocks/cards.php · Estilos: .b-cards
+name: Tarjetas
+icon: grid
+preview: fields
+wysiwyg: true
+fields:
+  eyebrow: fields/eyebrow
+  anchor: fields/anchor
+  title:
+    label: Título de la sección
+    type: text
+  intro:
+    extends: fields/writer
+    label: Texto de introducción
+  style:
+    label: Estilo de las tarjetas
+    type: select
+    width: 1/2
+    default: plain
+    required: true
+    options:
+      plain: Sencillas
+      numbered: Numeradas (01, 02, 03…)
+      highlight: Destacadas (fondo de color)
+      check: Lista con marcas ✓ (solo títulos)
+  columns:
+    label: Columnas
+    type: toggles
+    width: 1/2
+    default: "3"
+    options:
+      "2": "2"
+      "3": "3"
+      "4": "4"
+  items:
+    label: Tarjetas
+    type: structure
+    columns:
+      title: true
+    fields:
+      title:
+        label: Título
+        type: text
+        required: true
+      text:
+        extends: fields/writer
+      list:
+        label: Lista de puntos (opcional)
+        type: list
+      link:
+        label: Enlace (opcional)
+        type: link
+        width: 1/2
+        options:
+          - page
+          - url
+      linkLabel:
+        label: Texto del enlace
+        type: text
+        width: 1/2

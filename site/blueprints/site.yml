@@ -1,0 +1,179 @@
+# =====================================================================
+#  Pantalla principal del panel («MR&C Consulting»): lista de páginas
+#  y ajustes generales de la web (menú, pie, formulario, Google).
+#  Estos datos se guardan en content/site.en.txt y content/site.es.txt
+# =====================================================================
+title: MR&C Consulting
+
+tabs:
+
+  # --------------------------------------------------------------
+  pages:
+    label: Páginas
+    icon: page
+    columns:
+      main:
+        width: 2/3
+        sections:
+          listed:
+            label: Páginas publicadas
+            type: pages
+            status: listed
+            layout: list
+            create: default
+            info: "/{{ page.slug }}"
+            help: Arrastra para ordenar. El menú se edita en la pestaña «Menú y cabecera».
+          unlisted:
+            label: Páginas ocultas (legales, contacto…)
+            type: pages
+            status: unlisted
+            layout: list
+            create: false
+            info: "/{{ page.slug }}"
+          drafts:
+            label: Borradores
+            type: pages
+            status: draft
+            layout: list
+            create: default
+            empty: No hay borradores
+      sidebar:
+        width: 1/3
+        sections:
+          help:
+            type: info
+            label: Ayuda
+            theme: info
+            text: |
+              **¿Cómo editar?** Abre una página, cambia los textos y pulsa **Guardar**.
+
+              Arriba a la derecha puedes cambiar entre **English** y **Español**: cada idioma se edita por separado.
+
+              Guía completa: carpeta `docs/guia-editores.md`.
+
+  # --------------------------------------------------------------
+  header:
+    label: Menú y cabecera
+    icon: menu
+    fields:
+      menu:
+        label: Menú principal
+        type: structure
+        help: Cada idioma tiene su propio menú (cambia el idioma arriba a la derecha).
+        columns:
+          label: true
+          link: true
+          anchor: true
+        fields:
+          label:
+            label: Texto
+            type: text
+            required: true
+            width: 1/2
+          link:
+            label: Enlace
+            type: link
+            required: true
+            width: 1/2
+            options:
+              - page
+              - url
+          anchor:
+            extends: fields/anchor
+            label: Sección (opcional)
+            help: Para saltar a una sección concreta de la página, escribe su «ancla» (p. ej. mission).
+      ctaLabel:
+        label: Botón destacado de la cabecera · texto
+        type: text
+        width: 1/2
+      ctaLink:
+        label: Botón destacado de la cabecera · enlace
+        type: link
+        width: 1/2
+        options:
+          - page
+          - url
+
+  # --------------------------------------------------------------
+  footer:
+    label: Pie de página
+    icon: layout-bottom
+    fields:
+      footerText:
+        label: Texto de presentación
+        type: textarea
+        buttons: false
+      email:
+        label: Correo de contacto
+        type: email
+        width: 1/2
+      phone:
+        label: Teléfono
+        type: tel
+        width: 1/2
+      address:
+        label: Dirección
+        type: textarea
+        buttons: false
+        width: 1/2
+      social:
+        label: Redes sociales
+        type: structure
+        width: 1/2
+        columns:
+          network: true
+        fields:
+          network:
+            label: Red
+            type: select
+            required: true
+            options:
+              linkedin: LinkedIn
+              x: X (Twitter)
+              instagram: Instagram
+              youtube: YouTube
+          url:
+            label: Dirección del perfil
+            type: url
+            required: true
+      legalPages:
+        label: Páginas legales enlazadas en el pie
+        type: pages
+        query: site.pages
+        multiple: true
+
+  # --------------------------------------------------------------
+  form:
+    label: Formulario
+    icon: email
+    fields:
+      formRecipient:
+        label: Correo que recibe los mensajes del formulario
+        type: email
+        required: true
+        translate: false
+        help: Los mensajes de la página «Contacto» llegan aquí.
+      formSubject:
+        label: Asunto de los correos
+        type: text
+        translate: false
+        placeholder: Nuevo mensaje desde la web
+
+  # --------------------------------------------------------------
+  seo:
+    label: Google y redes
+    icon: search
+    fields:
+      metaDescription:
+        label: Descripción general para Google
+        type: textarea
+        buttons: false
+        maxlength: 170
+        help: Se usa en las páginas que no tienen descripción propia.
+      ogImage:
+        label: Imagen general al compartir
+        type: files
+        max: 1
+        layout: cards
+        query: site.images
+        uploads: image

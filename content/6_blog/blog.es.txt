@@ -1,0 +1,13 @@
+Slug: blog
+
+----
+
+Title: Blog
+
+----
+
+Lead: Noticias, cursos y acuerdos de MR&C Consulting.
+
+----
+
+Perpage: 9

@@ -1,0 +1,63 @@
+Title: Contact
+
+----
+
+Lead: Tell us about your project and let’s explore how we can help.
+
+----
+
+Intro: <p>Whether you are planning your first study or coordinating a large multicentre research project, we would be delighted to learn more about your research.</p><p>Fill in the form and we will get back to you shortly. You can also write to us directly by email.</p>
+
+----
+
+Success: 
+
+----
+
+Topics:
+
+- 
+  label: Starting a study
+  key: start
+- 
+  label: Monitoring
+  key: monitoring
+- 
+  label: Biostatistics
+  key: statistics
+- 
+  label: Database / eCRF
+  key: database
+- 
+  label: Regulatory support
+  key: regulatory
+- 
+  label: Medical devices
+  key: medical-devices
+- 
+  label: >
+    Scientific services (writing,
+    translation, design)
+  key: scientific
+- 
+  label: Digital solutions
+  key: digital
+- 
+  label: Other
+  key: other
+
+----
+
+Orgtypes: Hospital, University, Company, Academic foundation, Research institute, Other
+
+----
+
+Studytypes: Observational study, Investigator-initiated clinical trial, Medical device investigation, Registry, Other
+
+----
+
+Stages: Idea / concept, Study design, Funding / feasibility, Regulatory submission, Ongoing study, Analysis / publication
+
+----
+
+Uuid: 4nh5spkw6j1fnmzm

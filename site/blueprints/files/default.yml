@@ -1,0 +1,2 @@
+# Cualquier archivo subido en el panel usa el tipo «Imagen».
+extends: files/image

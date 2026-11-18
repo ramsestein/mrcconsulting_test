@@ -1,0 +1,29 @@
+# Pestaña reutilizable: textos para Google y para compartir en redes.
+label: Google y redes
+icon: search
+columns:
+  main:
+    width: 2/3
+    fields:
+      metaTitle:
+        label: Título para Google
+        type: text
+        maxlength: 70
+        help: Si se deja vacío se usa el título de la página.
+      metaDescription:
+        label: Descripción para Google
+        type: textarea
+        buttons: false
+        maxlength: 170
+        help: Una o dos frases que resuman la página (aparecen en los resultados de búsqueda).
+  sidebar:
+    width: 1/3
+    fields:
+      ogImage:
+        label: Imagen al compartir
+        type: files
+        max: 1
+        layout: cards
+        query: page.images
+        uploads: image
+        help: Se muestra al compartir el enlace en redes sociales o WhatsApp.

@@ -1,0 +1,8 @@
+/* =====================================================================
+   Retoques visuales del panel de edición (opcional, solo cosmético).
+   Se carga desde config.php → 'panel' → 'css'.
+   ===================================================================== */
+
+:root {
+  --color-focus: #106ab1;
+}

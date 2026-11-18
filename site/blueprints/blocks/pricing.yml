@@ -1,0 +1,83 @@
+# Bloque «Tabla de precios»: una tabla con hasta 4 columnas de precio.
+# Una fila marcada como «Subtítulo» ocupa todo el ancho y separa grupos.
+# HTML: site/snippets/blocks/pricing.php · Estilos: .b-pricing
+name: Tabla de precios
+icon: table
+preview: fields
+wysiwyg: true
+fields:
+  anchor: fields/anchor
+  title:
+    label: Título de la tabla
+    type: text
+    required: true
+  intro:
+    extends: fields/writer
+    label: Texto antes de la tabla (opcional)
+  conceptHeader:
+    label: Encabezado de la columna de conceptos
+    type: text
+    help: Las columnas de precio sin encabezado no se muestran.
+  header1:
+    label: Encabezado precio 1
+    type: text
+    width: 1/4
+  header2:
+    label: Encabezado precio 2
+    type: text
+    width: 1/4
+  header3:
+    label: Encabezado precio 3
+    type: text
+    width: 1/4
+  header4:
+    label: Encabezado precio 4
+    type: text
+    width: 1/4
+  rows:
+    label: Filas
+    type: structure
+    columns:
+      concept: true
+      price1: true
+      price2: true
+      price3: true
+      price4: true
+    fields:
+      concept:
+        label: Concepto
+        type: text
+        required: true
+      isGroup:
+        label: ¿Es un subtítulo de grupo?
+        type: toggle
+        text:
+          - "No"
+          - "Sí, ocupa toda la fila"
+      price1:
+        label: Precio 1
+        type: text
+        width: 1/4
+        when:
+          isGroup: false
+      price2:
+        label: Precio 2
+        type: text
+        width: 1/4
+        when:
+          isGroup: false
+      price3:
+        label: Precio 3
+        type: text
+        width: 1/4
+        when:
+          isGroup: false
+      price4:
+        label: Precio 4
+        type: text
+        width: 1/4
+        when:
+          isGroup: false
+  notes:
+    extends: fields/writer
+    label: Notas debajo de la tabla

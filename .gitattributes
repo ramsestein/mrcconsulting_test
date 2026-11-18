@@ -1,0 +1,14 @@
+# Finales de línea coherentes en todos los sistemas
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.webp binary
+*.woff2 binary
+
+# Archivos que NO se incluyen en el paquete para el servidor
+# (git archive → ver docs/despliegue-ionos.md)
+.github        export-ignore
+tools          export-ignore
+.gitignore     export-ignore
+.gitattributes export-ignore
+.editorconfig  export-ignore

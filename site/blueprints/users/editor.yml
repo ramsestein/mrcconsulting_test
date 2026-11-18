@@ -1,0 +1,32 @@
+# =====================================================================
+#  Rol «Editor»: para el equipo que mantiene los contenidos.
+#  Puede editar páginas, imágenes, menú y ajustes del sitio.
+#  NO puede gestionar usuarios, idiomas ni ver la información del sistema.
+#  (El rol «Administrador» lo crea Kirby y puede hacerlo todo.)
+# =====================================================================
+title: Editor
+description: Edita contenidos, imágenes y menús. No gestiona usuarios.
+
+permissions:
+  access:
+    panel: true
+    site: true
+    account: true
+    languages: false
+    system: false
+    users: false
+  languages:
+    create: false
+    delete: false
+    update: false
+  users:
+    create: false
+    delete: false
+    changeRole: false
+    changeEmail: false
+    changeName: false
+    changePassword: false
+    update: false
+  user:
+    changeRole: false
+    delete: false

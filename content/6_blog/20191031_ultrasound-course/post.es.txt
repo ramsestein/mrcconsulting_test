@@ -1,0 +1,21 @@
+Slug: iii-curso-ecografia
+
+----
+
+Title: III Curso de ecografía multiorgánica en el paciente crítico
+
+----
+
+Date: 2019-10-31
+
+----
+
+Excerpt: Un curso para profesionales que quieren convertir la ecografía en una herramienta avanzada para resolver problemas clínicos en el paciente crítico.
+
+----
+
+Cover: 
+
+----
+
+Text: [{"content":{"level":"h2","text":"¿Para quién?"},"id":"bf8be7d7-a673-43b0-abfc-e54ba1fa9fe6","isHidden":false,"type":"heading"},{"content":{"text":"<p>Este curso va dirigido a profesionales con interés en el uso de la ecografía en el paciente crítico como ayuda para la solución de problemas clínicos.</p>"},"id":"718206a8-efb9-4c87-a4d4-119dc7259b20","isHidden":false,"type":"text"},{"content":{"level":"h2","text":"¿Para qué?"},"id":"6173cb9b-8541-4a4d-a34a-7c8f3e720c5a","isHidden":false,"type":"heading"},{"content":{"text":"<p>Nuestro objetivo es aportar las herramientas necesarias para pasar de un nivel básico de eco a convertir la eco en tu herramienta avanzada para la práctica clínica diaria.</p>"},"id":"05fed34b-548b-43bf-aaec-d78982ae90a9","isHidden":false,"type":"text"},{"content":{"level":"h2","text":"¿Cómo?"},"id":"bf2bc4be-fbe8-4981-ab61-dd6e52e7d4de","isHidden":false,"type":"heading"},{"content":{"text":"<p>En esta edición damos un salto cualitativo añadiendo a la ecografía cardiopulmonar la exploración vascular, diafragmática, abdominal y de vía aérea.</p>"},"id":"9ce71cc1-35c4-4b99-af63-9e8728fcdd85","isHidden":false,"type":"text"}]

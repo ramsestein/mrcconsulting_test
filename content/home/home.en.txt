@@ -1,0 +1,17 @@
+Title: Home
+
+----
+
+Blocks: [{"content":{"eyebrow":"MR&C Consulting","title":"Clinical Research Solutions for Academic Investigators and Medical Device Companies","subtitle":"We support investigators, hospitals and medical device innovators from study concept to publication.","image":["hero.jpg"],"buttons":[{"label":"Contact us","link":"page://4nh5spkw6j1fnmzm","topic":"","style":"primary"},{"label":"Our services","link":"page://ihwqrvgrylgatczs","topic":"","style":"secondary"}]},"id":"d7f03179-8c1c-4a05-a91a-6c777fa4a25e","isHidden":false,"type":"hero"},{"content":{"eyebrow":"Services","anchor":"","title":"Comprehensive support at every stage of your study","intro":"<p>Whether you need full project management or support in a specific area, our multidisciplinary team can help.</p>","style":"highlight","columns":"4","items":[{"title":"Academic Clinical Research","text":"<p>Project management, monitoring, regulatory affairs, data management and biostatistics for investigator-initiated studies.</p>","list":"","link":"page://ihwqrvgrylgatczs","linklabel":"Learn more"},{"title":"Medical Devices","text":"<p>Clinical investigations, clinical evaluation, PMCF and MDR support to generate robust clinical evidence.</p>","list":"","link":"page://ihwqrvgrylgatczs","linklabel":"Learn more"},{"title":"Scientific Services","text":"<p>Medical writing, translation, scientific communication and visual abstracts.</p>","list":"","link":"page://ihwqrvgrylgatczs","linklabel":"Learn more"},{"title":"Digital Solutions","text":"<p>Online databases, eCRFs, investigator websites and digital tools for clinical research.</p>","list":"","link":"page://ihwqrvgrylgatczs","linklabel":"Learn more"}]},"id":"dfcbd7a2-5812-46a9-a3f8-11e43890f01c","isHidden":false,"type":"cards"},{"content":{"eyebrow":"For investigators","anchor":"","title":"Turning your research ideas into successful clinical projects","text":"<p>Every important research project starts with a question. We help investigators, hospitals and research groups transform their ideas into feasible studies, from concept to publication.</p>","image":["laboratory.jpg"],"imageposition":"right","frame":"true","buttons":[{"label":"Discover how we help","link":"page://tid3ibrwcydrn30r","topic":"","style":"primary"}]},"id":"6793182d-3326-4068-a020-aee839c2664f","isHidden":false,"type":"split"},{"content":{"eyebrow":"MR&C Consulting","anchor":"","title":"Our approach","intro":"","style":"numbered","columns":"3","items":[{"title":"Advice","text":"<p>Understanding our clients’ needs is a priority for us, so that we can offer the best advice and carry out projects in the most cost-effective way.</p>","list":"","link":"","linklabel":""},{"title":"Personalised","text":"<p>MR&C Consulting offers a personalised service, where the needs and resources of our clients come first.</p>","list":"","link":"","linklabel":""},{"title":"Research","text":"<p>A wide portfolio of services aimed at improving knowledge through research and the training of healthcare professionals.</p>","list":"","link":"","linklabel":""}]},"id":"cf9377b6-4b26-4107-a324-7de0dfbcbb42","isHidden":false,"type":"cards"},{"content":{"title":"Planning a clinical study or medical device investigation?","text":"Let’s discuss how we can support your project.","buttons":[{"label":"Contact us","link":"page://4nh5spkw6j1fnmzm","topic":"","style":"primary"}],"color":"gradient"},"id":"3f5a4262-08c9-4190-a1b9-86eafc0aeb02","isHidden":false,"type":"cta"}]
+
+----
+
+Metatitle: 
+
+----
+
+Metadescription: 
+
+----
+
+Uuid: 4khedeklqxnb82ue

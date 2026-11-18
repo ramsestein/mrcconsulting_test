@@ -1,0 +1,11 @@
+# Campo reutilizable: tema preseleccionado en el formulario de contacto.
+# Las opciones salen de la página «Contacto» → pestaña «Formulario».
+label: Tema del formulario
+type: select
+width: 1/2
+help: Solo si el botón lleva al formulario de contacto. Deja el tema ya elegido.
+options:
+  type: query
+  query: site.find('contact').topics.toStructure
+  text: "{{ item.label }}"
+  value: "{{ item.key }}"

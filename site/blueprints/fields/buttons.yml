@@ -1,0 +1,34 @@
+# Campo reutilizable: lista de botones (texto + enlace).
+# HTML: site/snippets/components/button.php
+label: Botones
+type: structure
+max: 2
+columns:
+  label: true
+  link: true
+fields:
+  label:
+    label: Texto del botón
+    type: text
+    required: true
+    width: 1/2
+  link:
+    label: Enlace
+    type: link
+    required: true
+    width: 1/2
+    options:
+      - page
+      - url
+      - email
+      - tel
+      - anchor
+  topic: fields/topic
+  style:
+    label: Estilo
+    type: toggles
+    width: 1/2
+    default: primary
+    options:
+      primary: Principal
+      secondary: Secundario

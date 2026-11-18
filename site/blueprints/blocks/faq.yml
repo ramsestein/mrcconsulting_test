@@ -1,0 +1,25 @@
+# Bloque «Preguntas frecuentes»: preguntas que se despliegan al pulsar.
+# HTML: site/snippets/blocks/faq.php · Estilos: .b-faq
+name: Preguntas frecuentes
+icon: question
+preview: fields
+wysiwyg: true
+fields:
+  eyebrow: fields/eyebrow
+  anchor: fields/anchor
+  title:
+    label: Título
+    type: text
+  items:
+    label: Preguntas
+    type: structure
+    columns:
+      question: true
+    fields:
+      question:
+        label: Pregunta
+        type: text
+        required: true
+      answer:
+        extends: fields/writer
+        label: Respuesta

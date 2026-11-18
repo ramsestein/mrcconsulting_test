@@ -1,0 +1,21 @@
+Title: Collaboration agreement with the Spanish Society of Anaesthesiology and Resuscitation (SEDAR)
+
+----
+
+Date: 2020-01-13
+
+----
+
+Excerpt: SEDAR and MR&C Consulting sign an agreement to promote research in anaesthesiology, critical care and pain.
+
+----
+
+Cover: - sedar.jpg
+
+----
+
+Text: [{"content":{"text":"<p>One of SEDAR’s strategic objectives is to promote research in the fields of anaesthesiology, critical care and pain. With this aim, SEDAR has signed a collaboration agreement with MR&C Consulting, a company with a portfolio of services designed to support biomedical research.</p><p>The agreement aims to make these resources more accessible to active members of the Society through a 10% discount on all the services MR&C Consulting offers on its website.</p><p>The agreement also includes a grant for a research project, to be awarded during the 35th SEDAR National Congress in Santiago de Compostela in April 2021, whose terms will be defined by the SEDAR Executive Committee and published on the SEDAR and MR&C Consulting websites during 2020.</p>"},"id":"f888dfb8-ca78-41a5-a9f5-719b954e4712","isHidden":false,"type":"text"}]
+
+----
+
+Uuid: uchrs5bgtyqbls6e

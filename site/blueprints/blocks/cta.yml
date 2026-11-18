@@ -1,0 +1,25 @@
+# Bloque «Llamada a la acción»: franja de color con título y botón
+# (normalmente al formulario de contacto).
+# HTML: site/snippets/blocks/cta.php · Estilos: .b-cta
+name: Llamada a la acción
+icon: megaphone
+preview: fields
+wysiwyg: true
+fields:
+  title:
+    label: Título
+    type: text
+    required: true
+  text:
+    label: Texto
+    type: textarea
+    buttons: false
+  buttons: fields/buttons
+  color:
+    label: Color de fondo
+    type: toggles
+    default: gradient
+    options:
+      gradient: Degradado de marca
+      blue: Azul
+      light: Claro
