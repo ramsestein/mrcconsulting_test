@@ -55,6 +55,12 @@ $privacy = $site->legalPages()->toPages()->filter(fn ($p) => str_contains($p->id
 						<a href="tel:<?= esc(preg_replace('/[^0-9+]/', '', $site->phone()->value()), 'attr') ?>"><?= esc($site->phone()) ?></a>
 					</li>
 					<?php endif ?>
+					<?php if ($site->address()->isNotEmpty()): ?>
+					<li>
+						<?php snippet('components/icon', ['name' => 'pin']) ?>
+						<span><?= $site->address()->escape()->nl2br() ?></span>
+					</li>
+					<?php endif ?>
 				</ul>
 			</div>
 
